@@ -59,7 +59,7 @@ export default function SectionTransportasi() {
   return (
     <motion.section
       id="transportasi"
-      className="w-full flex scroll-mt-16 flex-col py-10 px-11 mb-8 gap-10"
+      className="w-full flex scroll-mt-16 flex-col pb-10 px-11 mb-8 gap-10"
       initial="hidden"
       whileInView="visible"
       variants={fadeInVariants} // Menambahkan animasi saat elemen masuk viewport
