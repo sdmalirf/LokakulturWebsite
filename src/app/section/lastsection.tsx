@@ -12,7 +12,7 @@ export default function LastSection() {
         initial={{ x: 200 }} // Start from the left
         whileInView={{ x: 0 }} // Animate to normal position when in view
         transition={{ duration: 0.3, ease: "easeOut" }} // Control the duration and easing
-        viewport={{ once: false, amount: 0.3 }} // Trigger every time the section is in view
+        viewport={{ once: false, amount: 0.2 }} // Trigger every time the section is in view
         className="absolute bottom-0 right-[4%]"
       >
         <Image
@@ -27,7 +27,7 @@ export default function LastSection() {
         initial={{ y: -250 }} // Start from above
         whileInView={{ y: 0 }} // Animate to normal position when in view
         transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }} // Added delay for sequencing
-        viewport={{ once: false, amount: 0.5 }} // Trigger every time the section is in view
+        viewport={{ once: false, amount: 0.2 }} // Trigger every time the section is in view
         className="absolute top-[20%] right-[35%]"
       >
         <Image
