@@ -58,42 +58,44 @@ export default function SectionSejarah() {
   return (
     <motion.section
       id="sejarah"
-      className="w-full scroll-mt-32 h-[666px] mx-auto mb-12"
+      className="w-full bg-gray-200 scroll-mt-32 h-[666px] mx-auto mb-12"
       initial="hidden"
       animate="visible"
       variants={fadeInVariants}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.2 }}
     >
       <Swiper
-        className="h-full"
+        className="h-full w-full"
         modules={[EffectFade]} // Activate fade effect
         effect="fade" // Use fade effect
-        fadeEffect={{ crossFade: true }} // Enable crossfade option
+        fadeEffect={{ crossFade: false }} // Enable crossfade option
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
         onSlideChange={handleSlideChange}
       >
         {contents.map((content, index) => (
-          <SwiperSlide key={index} className="h-full">
+          <SwiperSlide key={index} className="w-full h-full">
             <motion.div
-              className="relative w-1/2 gap-8 flex h-full justify-center pl-11 flex-col text-white"
+              className="relative w-full text-center items-center lg:items-start lg:text-start lg:w-1/2 gap-4 lg:gap-8 flex h-full justify-center px-8 lg:pl-11 flex-col text-white"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-6xl font-extrabold">{content.zaman}</h3>
-              <p className="text-xl font-normal">{content.desc}</p>
+              <h3 className="text-3xl lg:text-6xl font-extrabold">
+                {content.zaman}
+              </h3>
+              <p className="text-base lg:text-xl font-normal">{content.desc}</p>
               <Button
                 variant={"outline"}
-                className="w-fit px-8 py-4 h-fit bg-transparent"
+                className="w-full lg:w-fit px-8 py-4 h-fit bg-transparent"
                 onClick={handleNextSlide}
               >
                 {isLastSlide ? "Balik ke Sejarah Awal" : "Sejarah Berikutnya"}
               </Button>
             </motion.div>
             <Image
-              className="w-full absolute top-0 -z-10 shadow-lg"
+              className="object-cover w-full h-full inset-0 absolute -z-10 shadow-lg"
               src={content.image}
               alt="no image"
               width={1440}

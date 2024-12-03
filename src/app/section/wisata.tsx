@@ -112,27 +112,27 @@ export default function TempatWisata() {
   return (
     <motion.section
       id="wisata"
-      className="flex scroll-mt-32 flex-col px-12 gap-7 pb-8"
+      className="flex scroll-mt-32 flex-col px-6 lg:px-12 gap-7 pb-8"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
       variants={fadeUp}
     >
       <motion.div
-        className="flex justify-between"
+        className="flex flex-col sm:flex-row gap-6 lg:gap-0 justify-between"
         variants={fadeUp}
         transition={{ delay: 0.2 }}
       >
-        <div className="w-1/2 flex flex-col gap-4">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <motion.h2
-            className="font-extrabold text-7xl"
+            className="font-extrabold text-4xl lg:text-7xl"
             variants={fadeUp}
             transition={{ delay: 0.4 }}
           >
             TEMPAT WISATA
           </motion.h2>
           <motion.p
-            className="text-xl font-medium"
+            className="text-base lg:text-xl font-medium"
             variants={fadeUp}
             transition={{ delay: 0.6 }}
           >
@@ -177,7 +177,7 @@ export default function TempatWisata() {
               <Tab key={index} className="focus:outline-none over">
                 {({ selected }) => (
                   <Button
-                    className={`p-4 w-fit h-fit font-bold ${
+                    className={`py-2 px-4 lg:p-4 w-fit h-fit font-medium lg:font-bold ${
                       selected ? "" : "bg-transparent border-black border-2"
                     }`}
                     variant={selected ? "default" : "outline"}
@@ -198,25 +198,32 @@ export default function TempatWisata() {
             {wisata.map((content, index) => (
               <TabPanel
                 key={index}
-                className="relative flex text-white px-11 flex-col justify-center w-full h-[550px] gap-8 rounded-2xl overflow-hidden"
+                className="relative flex text-white px-8   lg:px-11 flex-col justify-start pt-7 lg:pt-0 lg:justify-center w-full h-[480px] lg:h-[550px] gap-4 lg:gap-8 rounded-2xl overflow-hidden"
               >
                 <motion.h2
-                  className="font-extrabold text-6xl w-3/4"
-                  variants={fadeUp}
-                  transition={{ delay: 1.2 }}
+                  className="font-extrabold text-3xl lg:text-6xl w-full lg:w-3/4"
+                  // variants={fadeUp}
+                  // transition={{ delay: 1.2 }}
                 >
                   {content.nama}
                 </motion.h2>
-                <motion.div className="flex w-full gap-8" variants={fadeUp}>
-                  <p className="w-full text-xl font-medium">{content.desc}</p>
-                  <p className="w-full text-xl font-medium">{content.info}</p>
+                <motion.div
+                  className="flex flex-col lg:flex-row w-full gap-4 lg:gap-8"
+                  // variants={fadeUp}
+                >
+                  <p className="w-full text-sm lg:text-xl font-normal lg:font-medium ">
+                    {content.desc}
+                  </p>
+                  <p className="w-full text-sm lg:text-xl font-normal lg:font-medium">
+                    {content.info}
+                  </p>
                 </motion.div>
                 <Image
-                  src={content.image}
+                  src={"/tempatwisata/wisata-tugu.jpg"}
                   alt={`${content.nama} Image`}
                   width={1356}
                   height={580}
-                  className="absolute top-0 -z-10 left-0"
+                  className="absolute inset-0 object-cover w-full h-full -z-10 left-0"
                 />
               </TabPanel>
             ))}

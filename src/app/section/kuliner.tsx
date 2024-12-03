@@ -145,7 +145,6 @@ const kuliner = [
 ];
 
 export default function SectionKuliner() {
-  // Variants untuk animasi fadeIn dan scale
   const fadeInVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -154,16 +153,16 @@ export default function SectionKuliner() {
   return (
     <motion.section
       id="kuliner"
-      className="flex flex-col scroll-mt-28 mt-8 px-12 gap-7 pb-8"
+      className="flex flex-col scroll-mt-28 mt-8 px-8 lg:px-12 gap-7 pb-8"
       initial="hidden"
       whileInView="visible"
       variants={fadeInVariants} // Menambahkan animasi saat elemen masuk viewport
       viewport={{ once: false, amount: 0.2 }} // Animasi akan dipicu berulang kali
     >
-      <div className="flex justify-between mb-">
-        <div className="w-1/2 flex flex-col gap-4">
-          <h2 className="font-extrabold text-7xl">KULINER KHAS</h2>
-          <p className="text-xl font-medium">
+      <div className="flex flex-col sm:flex-row justify-between lg:mb-7 lg:gap-0 gap-6">
+        <div className="w-full lg:w-1/2 flex flex-col gap-2 lg:gap-4">
+          <h2 className="font-extrabold text-3xl lg:text-7xl">KULINER KHAS</h2>
+          <p className="text-base lg:text-xl font-medium">
             Rawon adalah salah satu makanan khas Jawa Timur yang terkenal dengan
             kuah hitam yang terbuat dari kluwek...
           </p>
@@ -198,7 +197,7 @@ export default function SectionKuliner() {
               <Tab key={index} className="focus:outline-none over">
                 {({ selected }) => (
                   <Button
-                    className={`p-4 w-fit min-w-[140px] h-fit font-bold ${
+                    className={`py-2 px-4 lg:p-4 w-fit min-w-[140px] h-fit font-bold ${
                       selected ? "" : "bg-transparent border-black border-2"
                     }`}
                     variant={selected ? "default" : "outline"}
@@ -214,29 +213,31 @@ export default function SectionKuliner() {
           {kuliner.map((content, index) => (
             <TabPanel
               key={index}
-              className="relative flex justify-center w-full h-[448px] gap-8 rounded-2xl overflow-hidden"
+              className="relative flex md:flex-row flex-col justify-center w-full h-full lg:h-[448px] gap-8 lg:rounded-2xl overflow-hidden"
             >
               <Image
                 src="/kuliner/kuliner-rawon.jpg"
                 alt={`${content.nama} Image`}
                 width={436}
                 height={438}
-                className="rounded-xl"
+                className="rounded-xl "
               />
               <div className="flex flex-col gap-4">
-                <h2 className="font-extrabold text-6xl w-3/4">
+                <h2 className="font-extrabold text-4xl lg:text-6xl w-full lg:w-3/4">
                   {content.nama}
                 </h2>
-                <p className="w-full text-xl font-medium">{content.sejarah}</p>
+                <p className="w-full text-base lg:text-xl font-medium">
+                  {content.sejarah}
+                </p>
                 <div>
-                  <p className="font-bold mt-4 mb-2 text-lg">
+                  <p className="font-bold lg:mt-4 mb-2 text-lg">
                     Rekomendasi Tempat Makan:
                   </p>
                   <ul className="space-y-2">
                     {content.rekomendasiTempatMakan.map((tempat, idx) => (
                       <motion.li
                         key={idx}
-                        className="flex items-center gap-3 border-2 py-4 px-6 w-fit rounded-lg border-black"
+                        className="flex w-full items-center gap-3 border-2 py-4 px-3 lg:px-6 lg:w-fit rounded-lg border-black"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: idx * 0.2, duration: 0.5 }}
@@ -246,8 +247,9 @@ export default function SectionKuliner() {
                           alt="Map Pin"
                           width={16}
                           height={16}
+                          className="w-6 lg:w-fit"
                         />
-                        <div className="flex items-center justify-center gap-2">
+                        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center gap-0 lg:gap-2">
                           {tempat.alamat.map((alamat, i) => (
                             <p key={i} className="text-sm text-gray-600">
                               {alamat}

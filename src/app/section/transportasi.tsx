@@ -62,19 +62,21 @@ export default function SectionTransportasi() {
       className="w-full flex scroll-mt-16 flex-col pb-10 px-11 mb-8 gap-10"
       initial="hidden"
       whileInView="visible"
-      variants={fadeInVariants} // Menambahkan animasi saat elemen masuk viewport
-      viewport={{ once: false, amount: 0.2 }} // Animasi akan dipicu berulang kali
+      variants={fadeInVariants}
+      viewport={{ once: false, amount: 0.2 }}
     >
       <div className="flex flex-col w-full items-center gap-2">
-        <h2 className="font-extrabold text-6xl">LAYANAN TRANSPORTASI BUS</h2>
-        <p className="font-medium text-xl text-center w-1/2">
+        <h2 className="font-extrabold text-3xl lg:text-6xl">
+          LAYANAN TRANSPORTASI BUS
+        </h2>
+        <p className="font-medium text-xl lg:text-center w-full lg:w-1/2">
           Kemudahan transportasi di Surabaya dapat kita coba untuk berkeliling
           Surabaya dengan nyaman, salah satunya dengan moda transportasi BUS
         </p>
       </div>
       <TabGroup className={"flex flex-col gap-2 "}>
-        <div className="w-full items-center flex overflow-x-auto no-scrollbar">
-          <TabList className="flex w-full justify-center gap-2 mb-4">
+        <div className="w-full items-center flex  overflow-x-auto no-scrollbar">
+          <TabList className="flex w-full lg:justify-center gap-2 mb-4">
             {transportasi.map((content, index) => (
               <Tab key={index} className="focus:outline-none over">
                 {({ selected }) => (
@@ -95,20 +97,20 @@ export default function SectionTransportasi() {
           {transportasi.map((content, index) => (
             <TabPanel
               key={index}
-              className="relative flex flex-row-reverse justify-center w-full gap-8 overflow-hidden"
+              className="relative flex flex-col lg:flex-row-reverse justify-center w-full gap-8 overflow-hidden"
             >
               <Image
                 src="/bus/bus-suroboyo.jpg"
                 alt={`${content.nama} Image`}
                 width={552}
                 height={449}
-                className="rounded-xl h-[448px]"
+                className="rounded-xl lg:h-[448px]"
               />
               <div className="flex flex-col gap-2">
-                <h2 className="font-extrabold text-4xl w-3/4">
+                <h2 className="font-extrabold text-xl lg:text-4xl w-3/4">
                   {content.nama}
                 </h2>
-                <p className="w-full text-xl font-medium">
+                <p className="w-full text-sm lg:text-xl font-medium">
                   {content.deskripsi}
                 </p>
                 <div>
@@ -124,6 +126,7 @@ export default function SectionTransportasi() {
                           alt="Map Pin"
                           width={16}
                           height={16}
+                          className="w-4 lg:w-fit"
                         />
                         <div className="flex items-center justify-center gap-2">
                           <p className="text-sm text-gray-600">{rute}</p>
@@ -136,7 +139,7 @@ export default function SectionTransportasi() {
                   <p className="font-bold mt-4 mb-2 text-lg">
                     Informasi Tambahan:
                   </p>
-                  <ul className="flex gap-2">
+                  <ul className="flex flex-col lg:flex-row gap-2">
                     <li className="flex items-center gap-3 border-2 py-2 px-4 w-fit rounded-lg border-black">
                       <Image
                         src={"/clock.png"}

@@ -19,22 +19,22 @@ export default function SectionBudaya() {
   return (
     <motion.section
       id="budaya"
-      className="w-full flex flex-col items-center scroll-mt-16 py-10 px-11 gap-6"
+      className="w-full flex flex-col items-center scroll-mt-16 py-10 px-8 lg:px-11 gap-6"
       initial="hidden"
       whileInView="visible"
       variants={fadeInVariants} // Animation when the section enters the viewport
       viewport={{ once: false, amount: 0.2 }} // Trigger animation when entering the viewport
     >
-      <div className="flex flex-col items-center gap-2 w-2/5">
+      <div className="flex flex-col items-center gap-2 w-full lg:w-2/5">
         <motion.h2
-          className="font-extrabold text-8xl"
-          variants={scaleVariants} // Scale effect for the title
+          className="font-extrabold text-5xl lg:text-8xl"
+          variants={scaleVariants}
         >
           BUDAYA
         </motion.h2>
         <motion.p
-          className="font-medium text-xl text-center"
-          variants={scaleVariants} // Scale effect for the description
+          className="font-medium text-sm lg:text-xl text-center"
+          variants={scaleVariants}
         >
           Selain kuliner dan tempat wisata Surabaya juga memiliki budaya-budaya
           yang unik
@@ -50,12 +50,14 @@ export default function SectionBudaya() {
             alt="Tari Remo"
             width={1356}
             height={529}
-            className="absolute top-0 left-0 -z-10"
+            className="absolute inset-0 w-full h-full -z-10"
           />
-          <div className="w-full bg-white py-8 px-6 rounded-xl">
-            <div className="flex flex-col gap-4">
-              <h2 className="font-extrabold text-4xl w-3/4">Tari Remo</h2>
-              <p className="w-full text-md font-medium">
+          <div className="w-full bg-white py-4 lg:py-8 px-6 rounded-xl">
+            <div className="flex flex-col gap-2 lg:gap-4">
+              <h2 className="font-extrabold text-xl lg:text-4xl w-3/4">
+                Tari Remo
+              </h2>
+              <p className="w-full text-xs lg:text-md font-medium">
                 Tari Remo adalah tarian tradisional yang menggambarkan semangat
                 dan keberanian masyarakat Surabaya. Tarian ini biasanya
                 dibawakan oleh penari pria yang mengenakan pakaian khas Jawa,
@@ -63,8 +65,8 @@ export default function SectionBudaya() {
                 ditampilkan dalam acara-acara budaya, festival, dan perayaan.
               </p>
               <div>
-                <p className="font-bold mt-4 mb-2 text-md">
-                  Rekomendasi Tempat Makan:
+                <p className="font-bold mt-0 lg:mt-4 mb-2 text-sm lg:text-md">
+                  Tempat Menonton:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-3 border-2 py-2 px-4 w-fit rounded-lg border-black">
@@ -75,7 +77,7 @@ export default function SectionBudaya() {
                       height={16}
                     />
                     <div className="flex items-center justify-center gap-2">
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs lg:text-sm text-gray-600">
                         UPT Taman Budaya Cak Durasim, Jl. Genteng Kali No.85,
                         Genteng, Surabaya.
                       </p>
@@ -86,7 +88,7 @@ export default function SectionBudaya() {
             </div>
           </div>
         </motion.div>
-        <div className="flex gap-6">
+        <div className="flex flex-col lg:flex-row gap-6">
           <motion.div
             className="w-full relative overflow-hidden rounded-2xl h-[520px] px-8 items-end flex pb-6"
             variants={fadeInVariants} // Animation for the second image and content
@@ -96,22 +98,24 @@ export default function SectionBudaya() {
               alt="Tari Lenggang Surabaya"
               width={674}
               height={529}
-              className="absolute top-0 left-0 -z-10"
+              className="absolute inset-0 w-full h-full -z-10"
             />
-            <div className="w-full bg-white py-8 px-6 rounded-xl">
-              <div className="flex flex-col gap-4">
-                <h2 className="font-extrabold text-4xl w-full">
-                  Tari Lenggang Surabaya
+            <div className="w-full bg-white py-4 lg:py-8 px-6 rounded-xl">
+              <div className="flex flex-col gap-2 lg:gap-4">
+                <h2 className="font-extrabold text-xl lg:text-4xl w-3/4">
+                  Tari Remo
                 </h2>
-                <p className="w-full text-md font-medium">
-                  Tarian ini merupakan tarian selamat datang yang dimainkan oleh
-                  penari wanita dengan gerakan anggun dan penuh warna. Tari
-                  Lenggang menggambarkan keramahan masyarakat Surabaya kepada
-                  tamu yang datang.
+                <p className="w-full text-xs lg:text-md font-medium">
+                  Tari Remo adalah tarian tradisional yang menggambarkan
+                  semangat dan keberanian masyarakat Surabaya. Tarian ini
+                  biasanya dibawakan oleh penari pria yang mengenakan pakaian
+                  khas Jawa, dengan gerakan yang dinamis dan ekspresif. Tari
+                  Remo sering ditampilkan dalam acara-acara budaya, festival,
+                  dan perayaan.
                 </p>
                 <div>
-                  <p className="font-bold mt-4 mb-2 text-md">
-                    Rekomendasi Tempat Makan:
+                  <p className="font-bold mt-0 lg:mt-4 mb-2 text-sm lg:text-md">
+                    Tempat Menonton:
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-3 border-2 py-2 px-4 w-fit rounded-lg border-black">
@@ -122,9 +126,9 @@ export default function SectionBudaya() {
                         height={16}
                       />
                       <div className="flex items-center justify-center gap-2">
-                        <p className="text-sm text-gray-600">
-                          Festival budaya di Surabaya, seperti di Taman Budaya
-                          Cak Durasim
+                        <p className="text-xs lg:text-sm text-gray-600">
+                          UPT Taman Budaya Cak Durasim, Jl. Genteng Kali No.85,
+                          Genteng, Surabaya.
                         </p>
                       </div>
                     </li>
@@ -144,19 +148,19 @@ export default function SectionBudaya() {
               height={529}
               className="absolute object-cover bottom-0 left-0 z-0"
             />
-            <div className="w-full bg-white py-8 px-6 rounded-xl z-10">
+            <div className="w-full bg-white py-4 lg:py-8 px-6 rounded-xl z-10">
               <div className="flex flex-col gap-4">
-                <h2 className="font-extrabold text-4xl w-full">
+                <h2 className="font-extrabold text-xl lg:text-4xl w-full">
                   Tari Sparkling Surabaya
                 </h2>
-                <p className="w-full text-md font-medium">
+                <p className="w-full text-xs lg:text-md font-medium">
                   Tarian modern yang diciptakan untuk merayakan semangat kota
                   Surabaya. Tarian ini menggabungkan elemen tradisional dengan
                   gerakan kontemporer, sering kali ditampilkan dalam acara
                   resmi.
                 </p>
                 <div>
-                  <p className="font-bold mt-4 mb-2 text-md">
+                  <p className="font-bold mt-0 lg:mt-4 mb-2 text-md">
                     Rekomendasi Tempat Makan:
                   </p>
                   <ul className="space-y-2">
@@ -168,7 +172,7 @@ export default function SectionBudaya() {
                         height={16}
                       />
                       <div className="flex items-center justify-center gap-2">
-                        <p className="text-sm text-gray-600">
+                        <p className="text-xs lg:text-sm text-gray-600">
                           Festival budaya di Surabaya, seperti di Taman Budaya
                           Cak Durasim
                         </p>

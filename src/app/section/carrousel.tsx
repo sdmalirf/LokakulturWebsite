@@ -40,20 +40,25 @@ const Carousel = () => {
     <section className="w-full mx-auto p-4 mb-10">
       <Swiper
         spaceBetween={12}
-        slidesPerView={3.5}
+        breakpoints={{
+          0: {
+            slidesPerView: 2.5, // Show 2 slides
+          },
+          640: {
+            slidesPerView: 3.5, // Show 3 slides
+          },
+        }}
         loop
         freeMode
         centeredSlides
         allowTouchMove={false}
         autoplay={{
-          delay: 0, // Tidak ada delay, slide terus berjalan
-          disableOnInteraction: false, // Autoplay tetap berjalan meskipun ada interaksi
+          delay: 0,
+          disableOnInteraction: false,
         }}
         speed={10000}
         effect="slide"
         modules={[Autoplay]}
-        // loopAdditionalSlides={contents.length}
-        // slidesPerGroup={1}
         pagination={{ clickable: true }}
         className="rounded-lg overflow-hidden swiper-transition"
       >

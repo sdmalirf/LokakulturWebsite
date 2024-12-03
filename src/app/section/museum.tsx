@@ -67,15 +67,15 @@ export default function SectionMuseum() {
   return (
     <motion.section
       id="museum"
-      className="w-full flex flex-col scroll-mt-16 py-8 px-11 gap-6"
+      className="w-full flex flex-col scroll-mt-16 py-8 px-8 lg:px-11 gap-6"
       initial="hidden"
       whileInView="visible"
       variants={fadeInVariants} // Add animation on entry
       viewport={{ once: false, amount: 0.2 }} // Trigger animation multiple times
     >
       <div className="flex flex-col w-full items-center gap-2">
-        <h2 className="font-extrabold text-8xl">MUSEUM</h2>
-        <p className="font-medium text-xl text-center w-2/5">
+        <h2 className="font-extrabold text-5xl lg:text-8xl">MUSEUM</h2>
+        <p className="font-medium text-xl text-center w-full lg:w-2/5">
           Selain budaya Surabaya juga banyak menyimpan sejarah pada suatu museum
         </p>
       </div>
@@ -86,7 +86,7 @@ export default function SectionMuseum() {
               <Tab key={index} className="focus:outline-none over">
                 {({ selected }) => (
                   <Button
-                    className={`p-4 w-fit min-w-[140px] h-fit font-bold ${
+                    className={`px-4 py-2 lg:p-4 w-fit min-w-[140px] h-fit font-bold ${
                       selected ? "" : "bg-transparent border-black border-2"
                     }`}
                     variant={selected ? "default" : "outline"}
@@ -102,7 +102,7 @@ export default function SectionMuseum() {
           {museum.map((content, index) => (
             <TabPanel
               key={index}
-              className="relative flex justify-center w-full h-[448px] gap-8 rounded-2xl overflow-hidden"
+              className="relative flex flex-col lg:flex-row justify-center w-full h-fit lg:h-[448px] gap-8 lg:rounded-2xl overflow-hidden"
             >
               <motion.div
                 initial={{ opacity: 0 }}
@@ -119,21 +119,21 @@ export default function SectionMuseum() {
                 />
               </motion.div>
               <div className="flex flex-col gap-4">
-                <h2 className="font-extrabold text-5xl w-3/4">
+                <h2 className="font-extrabold text-2xl lg:text-5xl w-3/4">
                   {content.nama}
                 </h2>
-                <p className="w-full text-xl font-medium">
+                <p className="w-full text-sm lg:text-xl font-medium">
                   {content.deskripsi}
                 </p>
                 <div>
-                  <p className="font-bold mt-4 mb-2 text-lg">
+                  <p className="font-bold lg:mt-4 mb-2 text-base  lg:text-lg">
                     Rekomendasi Tempat Makan:
                   </p>
                   <ul className="space-y-2">
                     {content.alamat.map((tempat, idx) => (
                       <li
                         key={idx}
-                        className="flex items-center gap-3 border-2 py-4 px-6 w-fit rounded-lg border-black"
+                        className="flex items-center gap-3 border-2 py-4 px-6 lg:w-fit rounded-lg border-black"
                       >
                         <Image
                           src={"/map-pin.png"}
@@ -142,7 +142,9 @@ export default function SectionMuseum() {
                           height={16}
                         />
                         <div className="flex items-center justify-center gap-2">
-                          <p className="text-sm text-gray-600">{tempat}</p>
+                          <p className="text-xs lg:text-sm text-gray-600">
+                            {tempat}
+                          </p>
                         </div>
                       </li>
                     ))}
