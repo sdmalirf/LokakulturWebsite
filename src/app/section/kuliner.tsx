@@ -163,8 +163,11 @@ export default function SectionKuliner() {
         <div className="w-full lg:w-1/2 flex flex-col gap-2 lg:gap-4">
           <h2 className="font-extrabold text-3xl lg:text-7xl">KULINER KHAS</h2>
           <p className="text-base lg:text-xl font-medium">
-            Rawon adalah salah satu makanan khas Jawa Timur yang terkenal dengan
-            kuah hitam yang terbuat dari kluwek...
+            Hidangan khas Surabaya menawarkan pengalaman tak terlupakan. Cicipi
+            Lontong Balap yang legendaris, Rujak Cingur dengan perpaduan rasa
+            segar dan gurih, hingga Sate Klopo yang unik dengan taburan kelapa
+            bakar. Jangan lewatkan juga Rawon, sup daging berwarna hitam pekat
+            yang menjadi ikon kuliner Jawa Timur
           </p>
         </div>
         <div className="flex gap-4">
