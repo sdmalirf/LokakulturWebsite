@@ -21,6 +21,7 @@ const kuliner = [
         alamat: ["Jl. Raya Darmo No. 135, Surabaya"],
       },
     ],
+    image: "/kuliner/kuliner-rawon.jpg",
   },
   {
     nama: "Sate Klopo",
@@ -36,6 +37,7 @@ const kuliner = [
         alamat: ["Jl. Rungkut Madya No. 31, Surabaya"],
       },
     ],
+    image: "/kuliner/kuliner-sate-klopo.jpg",
   },
   {
     nama: "Tahu Tek",
@@ -51,6 +53,7 @@ const kuliner = [
         alamat: ["Jl. Gubeng Kertajaya No. 1, Surabaya"],
       },
     ],
+    image: "/kuliner/kuliner-tahu-tek.jpg",
   },
   {
     nama: "Lontong Balap",
@@ -66,6 +69,7 @@ const kuliner = [
         alamat: ["Taman Bungkul, Surabaya"],
       },
     ],
+    image: "/kuliner/kuliner-lontong-balap.jpg",
   },
   {
     nama: "Rujak Cingur",
@@ -81,6 +85,7 @@ const kuliner = [
         alamat: ["Jl. Ahmad Jais No. 1, Surabaya"],
       },
     ],
+    image: "/kuliner/kuliner-rujak-cingur.jpg",
   },
   {
     nama: "Nasi Krawu",
@@ -96,6 +101,7 @@ const kuliner = [
         alamat: ["Jl. Ngagel No. 16, Surabaya"],
       },
     ],
+    image: "/kuliner/kuliner-nasi-krawu.jpg",
   },
   {
     nama: "Kue Cubir",
@@ -111,6 +117,7 @@ const kuliner = [
         alamat: ["Jl. Raya Tidar No. 28, Surabaya"],
       },
     ],
+    image: "/kuliner/kuliner-kue-cubir.jpg",
   },
   {
     nama: "Tahu Petis",
@@ -126,6 +133,7 @@ const kuliner = [
         alamat: ["Jl. Pahlawan No. 45, Surabaya"],
       },
     ],
+    image: "/kuliner/kuliner-tahu-petis.jpg",
   },
   {
     nama: "Bandeng Presto",
@@ -141,6 +149,7 @@ const kuliner = [
         alamat: ["Jl. Raya Gubeng No. 15, Surabaya"],
       },
     ],
+    image: "/kuliner/kuliner-bandeng-presto.jpg",
   },
 ];
 
@@ -159,7 +168,7 @@ export default function SectionKuliner() {
       variants={fadeInVariants} // Menambahkan animasi saat elemen masuk viewport
       viewport={{ once: false, amount: 0.2 }} // Animasi akan dipicu berulang kali
     >
-      <div className="flex flex-col sm:flex-row justify-between lg:mb-7 lg:gap-0 gap-6">
+      <div className="flex flex-col sm:flex-row-reverse justify-between lg:mb-7 lg:gap-0 gap-6">
         <div className="w-full lg:w-1/2 flex flex-col gap-2 lg:gap-4">
           <h2 className="font-extrabold text-3xl lg:text-7xl">KULINER KHAS</h2>
           <p className="text-base lg:text-xl font-medium">
@@ -172,20 +181,20 @@ export default function SectionKuliner() {
         </div>
         <div className="flex gap-4">
           <Image
-            src={"/tempatwisata/hero-1.png"}
+            src={"/tempatwisata/hero-4.png"}
             alt="Hero Image 1"
             width={249}
             height={317}
           />
           <div className="flex flex-col justify-between">
             <Image
-              src={"/tempatwisata/hero-2.png"}
+              src={"/tempatwisata/hero-5.png"}
               alt="Hero Image 2"
               width={249}
               height={172}
             />
             <Image
-              src={"/tempatwisata/hero-3.png"}
+              src={"/tempatwisata/hero-6.png"}
               alt="Hero Image 3"
               width={249}
               height={133}
@@ -219,7 +228,7 @@ export default function SectionKuliner() {
               className="relative flex md:flex-row flex-col justify-center w-full h-full lg:h-[448px] gap-8 lg:rounded-2xl overflow-hidden"
             >
               <Image
-                src="/kuliner/kuliner-rawon.jpg"
+                src={content.image}
                 alt={`${content.nama} Image`}
                 width={436}
                 height={438}

@@ -12,48 +12,56 @@ const museum = [
     alamat: ["Jl. Tunjungan No. 1-3, Genteng, Surabaya"],
     deskripsi:
       "Museum ini menyimpan lebih dari 1.000 artefak sejarah yang berkaitan dengan perkembangan kota Surabaya dari masa ke masa. Koleksinya mencakup foto-foto bersejarah, pakaian adat, dan berbagai benda budaya lainnya.",
+    image: "/museum/museum-siola.jpg",
   },
   {
     nama: "Museum Sepuluh Nopember",
     alamat: ["Dalam kompleks Tugu Pahlawan, Jl. Pahlawan, Surabaya"],
     deskripsi:
       "Museum ini didedikasikan untuk memperingati peristiwa heroik 10 November 1945, yang merupakan hari pahlawan di Indonesia. Di dalam museum terdapat diorama dan artefak yang menggambarkan perjuangan para pahlawan.",
+    image: "/museum/museum-sepuluh-nopember.jpg",
   },
   {
     nama: "Museum House of Sampoerna",
     alamat: ["Jl. Taman Sampoerna No.6, Pabean Cantian, Surabaya"],
     deskripsi:
       "Museum ini terletak di bekas pabrik rokok Sampoerna dan menampilkan sejarah perusahaan serta proses pembuatan rokok secara tradisional. Pengunjung dapat melihat koleksi barang-barang antik dan menikmati tur gratis.",
+    image: "/museum/museum-house-of-sampoerna.jpg",
   },
   {
     nama: "Monumen Kapal Selam (Monkasel)",
     alamat: ["Jl. Pemuda No.39, Genteng, Surabaya"],
     deskripsi:
       "Monumen ini merupakan kapal selam KRI Pasopati 410 yang dijadikan museum untuk mengenang sejarah angkatan laut Indonesia. Pengunjung dapat memasuki kapal selam dan melihat berbagai peralatan militer.",
+    image: "/museum/monkasel.jpg",
   },
   {
     nama: "Museum W.R. Soepratman",
     alamat: ["Jl. Mangga No.21, Surabaya"],
     deskripsi:
       "Museum ini didedikasikan untuk pencipta lagu kebangsaan Indonesia Raya, W.R. Soepratman. Di dalamnya terdapat koleksi artefak pribadi dan informasi tentang kehidupan serta karya-karyanya.",
+    image: "/museum/museum-wr-soepratman.jpg",
   },
   {
     nama: "Museum Kanker Indonesia",
     alamat: ["Jl. Kayon No.16-18, Surabaya"],
     deskripsi:
       "Museum ini bertujuan untuk meningkatkan kesadaran tentang kanker melalui informasi edukatif dan alat peraga terkait penyakit tersebut.",
+    image: "/museum/museum-kanker-indonesia.jpg",
   },
   {
     nama: "Museum Olahraga Surabaya",
     alamat: ["Komplek GOR Pancasila dan Lapangan THOR, Surabaya"],
     deskripsi:
       "Museum ini menghormati prestasi atlet-atlet asal Surabaya dengan menampilkan berbagai koleksi memorabilia olahraga.",
+    image: "/museum/museum-olahraga-surabaya.jpg",
   },
   {
     nama: "Museum Pendidikan Surabaya",
     alamat: ["Jl. Genteng Kali No.10, Surabaya (eks Sekolah Taman Siswa)"],
     deskripsi:
       "Museum ini menampilkan sejarah pendidikan di Indonesia serta perkembangan sistem pendidikan dari zaman kolonial hingga saat ini.",
+    image: "/museum/museum-pendidikan-surabaya.jpg",
   },
 ];
 
@@ -111,7 +119,7 @@ export default function SectionMuseum() {
                 className="w-full"
               >
                 <Image
-                  src="/museum/museum-siola.jpg"
+                  src={content.image}
                   alt={`${content.nama} Image`}
                   width={634}
                   height={449}

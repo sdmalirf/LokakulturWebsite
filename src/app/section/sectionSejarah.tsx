@@ -17,12 +17,12 @@ const contents = [
     desc: "Surabaya diyakini sudah ada sejak zaman Majapahit, ditandai dengan kemenangan Raden Wijaya dalam melawan pasukan Mongol pada 31 Mei 1293. Peristiwa ini terjadi di wilayah Surabaya, yang saat itu merupakan pelabuhan gerbang utama Kerajaan Majapahit. Nama Surabaya baru muncul dalam Prasasti Trowulan I atau Prasasti Canggu pada tahun 1358.",
   },
   {
-    image: "/sejarahsection/majapahit-image.jpg",
+    image: "/sejarahsection/sejarah-2.jpg",
     zaman: "Zaman Kolonial Belanda",
     desc: "Pada abad ke-19, Surabaya menjadi pelabuhan utama yang mengumpulkan hasil produksi perkebunan di ujung timur Pulau Jawa untuk diekspor ke Eropa.",
   },
   {
-    image: "/sejarahsection/majapahit-image.jpg",
+    image: "/sejarahsection/sejarah-3.jpg",
     zaman: "Pertempuran 10 November 1945",
     desc: "Peristiwa ini terjadi ketika arek-arek Suroboyo berhasil mengusir pasukan sekutu yang ingin mengamankan tawanan perang, melucuti senjata, dan menciptakan ketertiban.",
   },

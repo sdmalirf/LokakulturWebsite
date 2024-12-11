@@ -30,7 +30,7 @@ const contents = [
     alt: "Slide 5",
   },
   {
-    image: "/sectioncarrousel/Image-1.png",
+    image: "/sectioncarrousel/jembatanSuramadu.jpg",
     alt: "Slide 6",
   },
 ];

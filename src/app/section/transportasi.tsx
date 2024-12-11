@@ -19,6 +19,7 @@ const transportasi = [
     ],
     jamOperasional: "Setiap hari dari pukul 05:30 hingga 21:00 WIB",
     tarif: "Rp 5.000 untuk umum dan Rp 2.500 untuk pelajar",
+    image: "/bus/bus-suroboyo.jpg",
   },
   {
     nama: "Bus Surabaya Shopping and Culinary Track (SSCT)",
@@ -28,6 +29,7 @@ const transportasi = [
     jamOperasional:
       "Selasa, Sabtu, dan Minggu dari pukul 09:00 hingga 14:00 WIB",
     tarif: "Rp 7.500 untuk perjalanan selama lima jam",
+    image: "/bus/ssct-bus.jpg",
   },
   {
     nama: "Bus Archive Heritage Track",
@@ -36,6 +38,7 @@ const transportasi = [
     rute: ["Lokasi-lokasi bersejarah di Surabaya"],
     jamOperasional: "Informasi belum tersedia",
     tarif: "Informasi belum tersedia",
+    image: "/bus/archive-heritage-bus.jpg",
   },
   {
     nama: "Bus Kota Reguler",
@@ -46,6 +49,7 @@ const transportasi = [
     ],
     jamOperasional: "Umumnya beroperasi dari pagi hingga sore hari",
     tarif: "Tergantung operator bus",
+    image: "/bus/bus-kota-reguler.jpg",
   },
 ];
 
@@ -100,7 +104,7 @@ export default function SectionTransportasi() {
               className="relative flex flex-col lg:flex-row-reverse justify-center w-full gap-8 overflow-hidden"
             >
               <Image
-                src="/bus/bus-suroboyo.jpg"
+                src={content.image}
                 alt={`${content.nama} Image`}
                 width={552}
                 height={449}

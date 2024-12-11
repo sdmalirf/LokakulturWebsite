@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import TypewriterEffect from "../component/TypedEffect";
 
 export const SectionUp = () => {
@@ -15,7 +16,9 @@ export const SectionUp = () => {
             loop={true}
           />
         </h4>
-        <Button className="w-fit px-7 py-6">Jelajahi Sekarang!</Button>
+        <Link href={"#sejarah"}>
+          <Button className="w-fit px-7 py-6">Jelajahi Sekarang!</Button>
+        </Link>
       </div>
       <Image
         alt="tes"

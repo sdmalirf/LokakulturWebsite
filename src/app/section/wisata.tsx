@@ -219,7 +219,7 @@ export default function TempatWisata() {
                   </p>
                 </motion.div>
                 <Image
-                  src={"/tempatwisata/wisata-tugu.jpg"}
+                  src={content.image}
                   alt={`${content.nama} Image`}
                   width={1356}
                   height={580}
